@@ -52,6 +52,12 @@ section { padding: 7rem 0; position: relative; }
 .btn { display: inline-block; margin-top: 1.5rem; font-weight: 600; font-size: 1.05rem; padding: 0.9rem 1.6rem; text-decoration: none; background: var(--fresh); color: var(--white); }
 .btn:hover { background: var(--white); color: var(--black); }
 
+/* Latest diary entry, on the first screen. */
+.latest { display: flex; gap: 1rem; align-items: baseline; margin: 0 3rem; padding: 0.9rem 1.25rem; border-left: 4px solid var(--fresh); background: rgba(255,255,255,.05); text-decoration: none; max-width: 60rem; }
+.latest b { font-family: var(--sans); font-weight: 600; color: var(--fresh); white-space: nowrap; }
+.latest span { color: var(--white); }
+.latest:hover span { text-decoration: underline; text-decoration-color: var(--fresh); }
+
 /* The vial: a glass tube filled to the project's progress. */
 .vial { display: flex; align-items: flex-end; gap: 1.25rem; align-self: center; }
 .tube { width: 4.5rem; height: min(52vh, 30rem); border: 2px solid #3a3a3a; border-top: 0; border-radius: 0 0 2.25rem 2.25rem; position: relative; overflow: hidden;
@@ -170,6 +176,7 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
   section { padding: 4.5rem 0; }
   .hero { min-height: 0; }
   .hero nav { padding: 1.25rem; gap: 0.3rem 1.25rem; }
+  .latest { margin: 0 1.25rem; flex-direction: column; gap: 0.2rem; }
   .hero .stage { grid-template-columns: 1fr; padding: 1rem 1.25rem 3rem; gap: 2.5rem; }
   .vial { order: -1; align-items: center; }
   .tube { flex: 1; height: 3.5rem; border: 2px solid #3a3a3a; border-left: 0; border-radius: 0 1.75rem 1.75rem 0; }
@@ -198,6 +205,7 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
     <a href="#docs">Documentation</a>
     <a href="#rules">How it's made</a>
   </nav>
+  <a class="latest" id="latest" href="#log" hidden></a>
   <div class="stage">
     <div>
       <h1>Bloodlines<span class="ce">CE</span></h1>
@@ -423,6 +431,9 @@ fetch('devlog.json').then(r => r.json()).then(log => {
   document.getElementById('diary').innerHTML = html.slice(0, 7).join('') +
     (html.length > 7 ? `<details><summary>Older entries</summary>${html.slice(7).join('')}</details>` : '');
   document.getElementById('diary-updated').textContent = longDate(log.updated);
+  const today = days[0], latest = document.getElementById('latest');
+  latest.innerHTML = `<b>Dev diary, ${longDate(today.date)}</b><span>${today.notes.length ? esc(today.notes[0]) + (today.notes.length > 1 ? ` And ${today.notes.length - 1} more.` : '') : 'No new work landed today.'}</span>`;
+  latest.hidden = false;
   document.querySelectorAll('.js-updated').forEach(e => e.textContent = longDate(log.updated));
 }).catch(() => {
   document.getElementById('diary').textContent = 'The diary could not be loaded. Try reloading the page.';
