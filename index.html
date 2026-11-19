@@ -10,112 +10,133 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;800&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --paper: #fcfcfb;
+  --paper: #fff;
   --ink: #000;
-  --grey: #5f5f5f;
-  --rule: #d6d6d6;
-  --blood: #7a0909;
-  --blood-dry: #3d0505;
-  --empty: #e4e0e0;
+  --grey: #666;
+  --rule: #dcdcdc;
+  --blood: #8a0000;
+  --blood-dry: #4a0000;
+  --night: #000;
+  --moon: #e9e9e9;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body {
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font: 1.125rem/1.65 Spectral, Georgia, serif;
-}
+body { margin: 0; background: var(--paper); color: var(--ink); font: 1.125rem/1.7 Spectral, Georgia, serif; }
 a { color: var(--blood); text-underline-offset: 0.18em; }
 a:hover { color: var(--blood-dry); }
 :focus-visible { outline: 3px solid var(--blood); outline-offset: 3px; }
-h1, h2, h3, nav, .sheet, .phase-state, figcaption, .note, button, table { font-family: Jost, "Futura", "Century Gothic", sans-serif; }
-h2 { font-size: 2.4rem; font-weight: 300; line-height: 1.1; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
-h3 { font-size: 1.25rem; font-weight: 600; margin: 2.5rem 0 0.5rem; }
-p, li { max-width: 66ch; }
-code { font-size: 0.88em; background: #efeded; padding: 0.1em 0.3em; }
-pre { background: var(--ink); color: #f1f1f1; padding: 1rem 1.25rem; overflow-x: auto; font-size: 0.9rem; max-width: 66ch; }
-pre code { background: none; padding: 0; }
+h1, h2, h3, nav, .sheet, .phase-state, .note, .btn, table, summary, .log time, .vial { font-family: Jost, Futura, "Century Gothic", sans-serif; }
+p, li { max-width: 64ch; }
+code { font-size: 0.88em; background: #f0f0f0; padding: 0.1em 0.3em; }
 
-/* Layout: a narrow sticky index on the left, one reading column on the right. */
-.page { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 4rem; max-width: 72rem; margin: 0 auto; padding: 0 2rem; }
-nav { position: sticky; top: 0; align-self: start; padding-top: 3rem; font-size: 0.95rem; }
-nav a { display: block; color: var(--ink); text-decoration: none; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.75rem; }
-nav a:hover { border-left-color: var(--blood); }
-nav .home { font-weight: 800; font-size: 1.1rem; margin-bottom: 1.5rem; padding-left: 0; }
-main section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
-main section:first-child { border-top: 0; }
-
-/* Hero */
-.hero { padding-top: 3rem !important; }
-.hero h1 { font-size: clamp(3.5rem, 11vw, 8.5rem); font-weight: 800; line-height: 0.88; letter-spacing: -0.045em; margin: 0 0 2rem; }
+/* Hero: night, with the blood vial filled to the project's progress. */
+.hero { background: var(--night); color: var(--moon); display: grid; grid-template-columns: minmax(9rem, 14rem) 1fr; grid-template-rows: auto 1fr; min-height: min(100vh, 52rem); }
+.hero nav { grid-column: 2; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; padding: 2rem 3rem 0; font-size: 0.95rem; }
+.hero nav a { color: var(--moon); text-decoration: none; border-bottom: 1px solid transparent; }
+.hero nav a:hover { border-bottom-color: var(--blood); color: #fff; }
+.vial { grid-row: 1 / span 2; position: relative; overflow: hidden; border-right: 1px solid #2a2a2a; }
+.vial .fill { position: absolute; left: 0; right: 0; bottom: 0; height: var(--fill, 0%); background: var(--blood); transition: height 1.6s cubic-bezier(.2,.7,.2,1); }
+.vial .level { position: absolute; left: 0; right: 0; bottom: var(--fill, 0%); padding: 0 1.25rem 0.6rem; transition: bottom 1.6s cubic-bezier(.2,.7,.2,1); }
+.vial .level b { display: block; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1; color: #fff; letter-spacing: -0.03em; }
+.vial .level span { font-size: 0.9rem; color: var(--moon); }
+.hero .words { grid-column: 2; padding: 4rem 3rem; align-self: end; }
+.hero h1 { font-size: clamp(3.75rem, 12vw, 10rem); font-weight: 800; line-height: 0.85; letter-spacing: -0.05em; margin: 0 0 2.5rem; color: #fff; }
 .hero h1 span { display: block; }
-.hero-track { display: inline-flex; align-items: center; gap: 1rem; margin: -0.5rem 0 2.5rem; font-family: Jost, sans-serif; color: var(--ink); text-decoration: none; }
-.hero-track .dot { width: 1.6rem; height: 1.6rem; }
-.hero-track .dots { gap: 0.45rem; }
-.hero .lede { font-size: 1.4rem; line-height: 1.45; max-width: 34ch; margin: 0 0 1.5rem; }
-.hero .need { color: var(--grey); max-width: 52ch; }
-.buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
-.btn { font-family: Jost, sans-serif; font-weight: 600; padding: 0.7rem 1.3rem; text-decoration: none; border: 2px solid var(--ink); color: var(--ink); }
-.btn.primary { background: var(--blood); border-color: var(--blood); color: #fff; }
-.btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.hero .lede { font-size: 1.5rem; line-height: 1.4; max-width: 30ch; margin: 0 0 1.25rem; color: #fff; }
+.hero .need { color: #b5b5b5; max-width: 54ch; }
+.btn { display: inline-block; margin-top: 1.5rem; font-weight: 600; padding: 0.75rem 1.4rem; text-decoration: none; background: var(--blood); color: #fff; }
+.btn:hover { background: #fff; color: var(--ink); }
 
-/* Character-sheet dot tracks: the page's one loud device. */
+/* Sections: heading in a left column that stays in view while its content scrolls. */
+main { max-width: 76rem; margin: 0 auto; padding: 0 3rem; }
+main section { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 3rem; padding: 5rem 0; border-top: 1px solid var(--rule); }
+main section:first-child { border-top: 0; }
+main h2 { font-size: 2.1rem; font-weight: 300; line-height: 1.1; margin: 0; letter-spacing: -0.01em; position: sticky; top: 2rem; align-self: start; }
+h3 { font-size: 1.2rem; font-weight: 600; margin: 2.25rem 0 0.4rem; }
+.body > :first-child { margin-top: 0; }
+.body ul { padding-left: 1.1rem; }
+.body ul li::marker { color: var(--blood); }
+
+/* Character-sheet dot tracks. */
 .sheet { margin: 0; padding: 0; list-style: none; max-width: 40rem; }
+.body ul.sheet { padding-left: 0; }
 .trait { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 0.75rem; padding: 0.35rem 0; }
-.trait .name { font-weight: 400; }
-.trait .leader { border-bottom: 1px dotted var(--grey); transform: translateY(-0.3em); }
+.trait .leader { border-bottom: 1px dotted #999; transform: translateY(-0.3em); }
 .dots { display: inline-flex; gap: 0.3rem; }
 .dot { width: 0.95rem; height: 0.95rem; border-radius: 50%; border: 1.5px solid var(--ink); }
 .dot.full { background: var(--blood); border-color: var(--blood); }
 .dot.half { background: linear-gradient(90deg, var(--blood) 50%, transparent 50%); border-color: var(--blood); }
 .trait .count { grid-column: 1 / -1; font-size: 0.85rem; color: var(--grey); margin-top: -0.2rem; }
+.big { margin: 1.5rem 0 2rem; }
 .big .trait { padding: 0.8rem 0; }
 .big .name { font-size: 1.35rem; }
 .big .dot { width: 1.35rem; height: 1.35rem; }
-.score { font-family: Jost, sans-serif; font-size: 5rem; font-weight: 800; color: var(--blood); line-height: 1; margin: 0; }
-.score small { font-size: 1.2rem; font-weight: 400; color: var(--ink); margin-left: 0.5rem; }
-details { max-width: 40rem; border-bottom: 1px solid var(--rule); }
-details summary { cursor: pointer; font-family: Jost, sans-serif; padding: 0.6rem 0; }
-details .sheet { padding: 0 0 1rem 1rem; font-size: 0.95rem; }
+details { max-width: 40rem; border-top: 1px solid var(--rule); }
+details:last-of-type { border-bottom: 1px solid var(--rule); }
+details summary { cursor: pointer; padding: 0.7rem 0; }
+.body details ul.sheet { padding: 0 0 1rem 1rem; font-size: 0.95rem; }
 details .dot { width: 0.7rem; height: 0.7rem; }
 
-/* Phases: a real sequence, so numbered. */
+/* Roadmap: a real sequence, so numbered. */
 .phases { list-style: none; padding: 0; margin: 0; counter-reset: phase -1; max-width: 46rem; }
-.phases li { counter-increment: phase; display: grid; grid-template-columns: 3rem 1fr; gap: 0 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
-.phases li::before { content: counter(phase); font-family: Jost, sans-serif; font-size: 2rem; font-weight: 300; line-height: 1; grid-row: span 2; }
+.phases li { counter-increment: phase; display: grid; grid-template-columns: 3.5rem 1fr; gap: 0 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
+.phases li::before { content: counter(phase); font-family: Jost, sans-serif; font-size: 2.2rem; font-weight: 300; line-height: 1; grid-row: 1 / span 3; color: #aaa; }
+.phases li > * { grid-column: 2; }
 .phases li.done::before { color: var(--blood); font-weight: 600; }
-.phases li.now { border-left: 4px solid var(--blood); padding-left: 1rem; margin-left: calc(-1rem - 4px); }
+.phases li.now { background: var(--night); color: var(--moon); padding: 1.25rem; margin: 0.5rem -1.25rem; border: 0; }
+.phases li.now::before { color: #fff; font-weight: 800; }
+.phases li.now strong { color: #fff; }
+.phases li.now .phase-state { color: #ff8a8a; }
 .phases strong { font-family: Jost, sans-serif; font-weight: 600; }
-.phase-state { font-size: 0.9rem; color: var(--grey); margin-left: 0.5rem; }
+.phase-state { font-size: 0.85rem; color: var(--grey); }
 .phases p { margin: 0.2rem 0 0; font-size: 1rem; }
 
-.log { list-style: none; padding: 0; max-width: 46rem; }
-.log li { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
-.log time { font-family: Jost, sans-serif; font-weight: 600; display: block; font-size: 0.95rem; }
+/* What works: short lists side by side. */
+.works { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 0 2rem; align-content: start; }
+.works h3, .works ul { margin: 0 0 2.25rem; padding-top: 0.9rem; border-top: 3px solid var(--ink); }
+.works ul { font-size: 1rem; padding-left: 1.1rem; }
+
+.log { list-style: none; padding: 0; margin: 0; max-width: 46rem; }
+.body ul.log { padding-left: 0; }
+.log li { display: grid; grid-template-columns: 9rem 1fr; gap: 1rem; padding: 0.9rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
+.log time { font-weight: 600; font-size: 0.95rem; }
 
 table { border-collapse: collapse; width: 100%; max-width: 46rem; font-size: 0.95rem; }
-th, td { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
-th { font-weight: 600; }
+th, td { text-align: left; padding: 0.55rem 0.75rem 0.55rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; border-bottom: 2px solid var(--ink); }
 td code { white-space: nowrap; }
 .note { font-size: 0.9rem; color: var(--grey); }
-footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.95rem; color: var(--grey); }
+footer { background: var(--night); color: #a8a8a8; font-size: 0.95rem; }
+footer p { max-width: 76rem; margin: 0 auto; padding: 3rem; }
 
-@media (max-width: 52rem) {
-  .page { grid-template-columns: 1fr; gap: 0; padding: 0 1.25rem; }
-  nav { position: static; padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
-  nav .home { width: 100%; margin-bottom: 0.5rem; }
-  nav a { padding-left: 0; border-left: 0; }
-  h2 { font-size: 2rem; }
-  main section { padding: 3rem 0; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .vial .fill, .vial .level { transition: none; }
+}
+@media (max-width: 54rem) {
+  .hero { grid-template-columns: 1fr; grid-template-rows: none; min-height: 0; }
+  .hero nav, .hero .words { grid-column: 1; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .hero .words { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .vial { grid-row: auto; height: 5.5rem; border: 0; border-top: 1px solid #2a2a2a; margin-top: 1.5rem; order: 2; }
+  .hero .words { order: 3; }
+  .vial .fill { top: 0; height: auto; width: var(--fill, 0%); transition-property: width; }
+  .vial .level { bottom: auto; top: 50%; transform: translateY(-50%); padding: 0 1.25rem; display: flex; align-items: baseline; gap: 0.6rem; transition: none; }
+  .vial .level b { font-size: 2.5rem; }
+  main { padding: 0 1.25rem; }
+  main section { grid-template-columns: 1fr; gap: 1.5rem; padding: 3.5rem 0; }
+  main h2 { position: static; font-size: 2rem; }
+  .log li { grid-template-columns: 1fr; gap: 0.1rem; }
+  .works { grid-template-columns: 1fr; }
+  .works h3 { margin-bottom: 0; }
+  .works ul { border-top: 0; padding-top: 0.4rem; }
+  footer p { padding: 2rem 1.25rem; }
 }
 </style>
 </head>
 <body>
-<div class="page">
-<nav aria-label="Sections">
-  <a class="home" href="#top">Bloodlines CE</a>
+<header class="hero" id="top">
+  <div class="vial" aria-hidden="true"><div class="fill"></div><div class="level"><b id="vial-pct">&nbsp;</b><span>built so far</span></div></div>
+  <nav aria-label="Sections">
   <a href="#progress">Progress</a>
   <a href="#roadmap">Roadmap</a>
   <a href="#works">What works</a>
@@ -124,30 +145,30 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
   <a href="#docs">Documentation</a>
   <a href="#rules">How it's made</a>
 </nav>
-
-<main id="top">
-<section class="hero">
+  <div class="words">
   <h1>Bloodlines <span>CE</span></h1>
-  <a class="hero-track" id="hero-track" href="#progress" aria-label="Progress"></a>
   <p class="lede">The 2004 Vampire: The Masquerade – Bloodlines, running on a new, open-source engine.</p>
   <p class="need">Same maps, same quests, same dialogue. Bloodlines CE reads them from your own copy of the game (GOG or Steam, with the Unofficial Patch) and runs them on Godot 4 and modern C++ in place of the original executables. It ships with no game files.</p>
   <p class="need">It is not playable from start to finish yet. The tutorial runs, combat is being matched to the original, and the progress below is regenerated from the code as it grows.</p>
-  <div class="buttons">
-    <a class="btn primary" href="#progress">See how far along it is</a>
+  <a class="btn" href="#progress">See how far along it is</a>
   </div>
-</section>
+</header>
+
+<main>
 
 <section id="progress">
   <h2>Progress</h2>
+  <div class="body">
   <p>Every map in the game is scanned for the objects it places, the events those objects send each other, and the script functions the quests call. Each of those counts once it works in Bloodlines CE. Each dot is a tenth of the way there.</p>
-  <p class="score" id="overall" aria-live="polite">…<small>of what the game uses</small></p>
   <ul class="sheet big" id="areas"></ul>
   <div id="groups"></div>
   <p class="note" id="progress-note">Counted across all 108 maps. Last regenerated 18 November 2026.</p>
+</div>
 </section>
 
 <section id="roadmap">
   <h2>Roadmap</h2>
+  <div class="body">
   <p>The work goes one phase at a time, and a phase only closes when its acceptance test passes.</p>
   <ol class="phases">
     <li class="done"><strong>Foundation</strong><span class="phase-state">done</span><p>Build system, Windows and Linux CI, and a tool that inventories a game install.</p></li>
@@ -160,10 +181,12 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
     <li><strong>Saves and interface</strong><span class="phase-state">not started</span><p>Save and load, inventory, journal, map, and settings including widescreen UI and key binding.</p></li>
     <li><strong>Parity pass</strong><span class="phase-state">not started</span><p>A full playthrough with every clan, with each difference from the original written down and either kept or fixed.</p></li>
   </ol>
+</div>
 </section>
 
 <section id="works">
   <h2>What works today</h2>
+  <div class="body works">
   <h3>The world</h3>
   <ul>
     <li>Every map loads with world geometry, displacements, baked lightmaps, skyboxes, water, brush entities and static props, at hundreds of frames per second.</li>
@@ -186,10 +209,12 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
     <li>Melee for the player and NPCs, each weapon with its own animations. Dogs bite.</li>
     <li>NPCs hear footsteps and gunfire. Every fight in the tutorial can be won.</li>
   </ul>
+</div>
 </section>
 
 <section id="log">
   <h2>Recent work</h2>
+  <div class="body">
   <ul class="log">
     <li><time datetime="2026-11-18">18 November 2026</time>Light levels checked against the original at a street lamp, standing and crouched. All twelve test spots now match.</li>
     <li><time datetime="2026-11-18">18 November 2026</time>Melee attacks pick the right animation for the weapon in your hand, from fists to katana.</li>
@@ -198,16 +223,20 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
     <li><time datetime="2026-11-16">16 November 2026</time>NPCs react to what they hear: your footsteps, fights and gunshots.</li>
     <li><time datetime="2026-11-14">14 November 2026</time>Player and NPC melee hits now sweep along the weapon's swing, with the original timing.</li>
   </ul>
+</div>
 </section>
 
 <section id="install">
   <h2>Download</h2>
+  <div class="body">
   <p>There is nothing to download yet. The first build will be posted here once the tutorial plays start to finish from a packaged release.</p>
   <p>When it comes, you will need your own copy of Vampire: The Masquerade – Bloodlines from GOG or Steam, with the Unofficial Patch installed. Bloodlines CE reads the game's files from that install and ships none of its own.</p>
+</div>
 </section>
 
 <section id="docs">
   <h2>Documentation</h2>
+  <div class="body">
   <p>Everything Bloodlines CE knows about the original game is written down in plain language before any code is written for it. When the source opens, these documents will be the place to start if you want to mod the game, write your own tools, or check our work.</p>
   <h3>File formats</h3>
   <table>
@@ -251,10 +280,12 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
   </table>
   <p>Decisions about the project itself are recorded as architecture decision records, one for each finished phase.</p>
   <p class="note">The documents themselves will be published with the source code.</p>
+</div>
 </section>
 
 <section id="rules">
   <h2>How it's made</h2>
+  <div class="body">
   <p>Bloodlines CE is a port, not a remake. The goal is the game you remember, bugs and all, on an engine that can be fixed and extended in source. When the port and the original disagree, the original is right until someone has measured it.</p>
   <ul>
     <li>No game files go in the repository. You bring your own copy.</li>
@@ -263,16 +294,13 @@ footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.
     <li>Fixes from the Unofficial Patch are reviewed one by one. Each is either kept or reproduced as it was, and the decision is written down.</li>
   </ul>
   <p>The code is GPL-3.0 on top of the MIT-licensed Godot engine.</p>
+</div>
 </section>
 </main>
-</div>
 
-<div class="page">
-<div></div>
 <footer>
   <p>Bloodlines CE is a fan project. It isn't affiliated with or endorsed by Paradox Interactive, World of Darkness, Activision or Troika Games, and it includes no game content. Vampire: The Masquerade is a trademark of Paradox Interactive AB. You need a legally owned copy of Vampire: The Masquerade – Bloodlines to use it.</p>
 </footer>
-</div>
 
 <script>
 // Fills the progress section from progress.json (written by tools/progress/progress.py).
@@ -305,8 +333,9 @@ const AREA_TEXT = {
 fetch('progress.json').then(r => r.json()).then(items => {
   const areas = [...new Set(items.map(i => i.area))];
   const overall = areas.reduce((sum, a) => sum + tally(items.filter(i => i.area === a)).share, 0) / areas.length;
-  document.getElementById('hero-track').innerHTML = `${track(overall, DOTS)}<span>${Math.round(overall * 100)}% built</span>`;
-  document.getElementById('overall').innerHTML = `${Math.round(overall * 100)}%<small>of what the game uses</small>`;
+  const pct = Math.round(overall * 100);
+  document.getElementById('vial-pct').textContent = pct + '%';
+  requestAnimationFrame(() => requestAnimationFrame(() => document.querySelector('.hero').style.setProperty('--fill', pct + '%')));
   document.getElementById('areas').innerHTML = areas.map(a =>
     row(esc(a), tally(items.filter(i => i.area === a)), DOTS, AREA_TEXT[a] || '')).join('');
   document.getElementById('groups').innerHTML = areas.map(a => {
@@ -317,7 +346,7 @@ fetch('progress.json').then(r => r.json()).then(items => {
       '</ul></details>';
   }).join('');
 }).catch(() => {
-  document.getElementById('overall').textContent = 'Progress data could not be loaded.';
+  document.getElementById('areas').innerHTML = '<li>Progress data could not be loaded. Try reloading the page.</li>';
 });
 </script>
 </body>
