@@ -119,10 +119,21 @@ summary { cursor: pointer; padding: 0.9rem 0; font-weight: 600; }
 .works li { margin-bottom: 0.5rem; }
 .works li::marker, .docs-grid li::marker { color: var(--blood); }
 
-/* Recent work */
-.log { list-style: none; padding: 0; margin: 0; max-width: 56rem; }
-.log li { display: grid; grid-template-columns: 11rem 1fr; gap: 2rem; padding: 1.4rem 0; border-top: 1px solid #2c2c2c; max-width: none; font-size: 1.15rem; }
-.log time { color: var(--fresh); font-weight: 600; font-size: 1rem; padding-top: 0.2rem; }
+
+/* Dev diary */
+.diary-meta { font-family: var(--sans); color: var(--ash); margin: -1.5rem 0 3rem; }
+.diary-meta time { color: var(--white); }
+.day { display: grid; grid-template-columns: 13rem 1fr; gap: 2rem; padding: 1.75rem 0; border-top: 1px solid #2c2c2c; }
+.day:first-child { border-top: 3px solid var(--fresh); }
+.day time { display: block; font-weight: 600; font-size: 1.15rem; }
+.day .pct { font-family: var(--sans); color: var(--ash); font-size: 0.95rem; }
+.day .up { color: var(--fresh); font-weight: 600; }
+.day ul { margin: 0; padding-left: 1.1rem; }
+.day li { margin-bottom: 0.4rem; font-size: 1.1rem; }
+.day li::marker { color: var(--fresh); }
+.day.quiet p { margin: 0; color: var(--ash); }
+#diary details { border-top: 1px solid #2c2c2c; margin-top: 1rem; }
+#diary summary { color: var(--ash); }
 
 /* Download */
 .download { background: var(--fresh); }
@@ -169,7 +180,7 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
   .hero h1 { line-height: 0.95; }
   .vial-read span { display: none; }
   .drip { height: 4rem; }
-  .log li { grid-template-columns: 1fr; gap: 0.25rem; }
+  .day { grid-template-columns: 1fr; gap: 0.5rem; }
   .phases li { padding-left: 3.75rem; }
   .phases li::after { left: 1.4rem; }
 }
@@ -182,7 +193,7 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
     <a href="#progress">Progress</a>
     <a href="#roadmap">Roadmap</a>
     <a href="#works">What works</a>
-    <a href="#log">Recent work</a>
+    <a href="#log">Dev diary</a>
     <a href="#download">Download</a>
     <a href="#docs">Documentation</a>
     <a href="#rules">How it's made</a>
@@ -210,7 +221,7 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
     <p class="intro">Every map in the game is scanned for the objects it places, the events those objects send each other, and the script functions the quests call. Each one counts once it works in Bloodlines CE.</p>
     <ul class="areas" id="areas"></ul>
     <div class="kinds" id="groups"></div>
-    <p class="note">Counted across all 108 maps. Each dot is a tenth of the way there. Last regenerated 18 November 2026.</p>
+    <p class="note">Counted across all 108 maps. Each dot is a tenth of the way there. Last regenerated <span class="js-updated">…</span>.</p>
   </div>
 </section>
 <svg class="drip" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><rect width="1440" height="120" fill="#000"/><path style="fill:#8a0000" d="M0 0H1440V22H73C73 50 75 60 81 60C87 60 89 50 89 22H128C128 110 130 120 135 120C140 120 142 110 142 22H243C243 36 245 46 250 46C255 46 257 36 257 22H365C365 65 367 75 371 75C375 75 377 65 377 22H438C438 20 440 30 444 30C448 30 450 20 450 22H533C533 20 535 30 545 30C555 30 557 20 557 22H620C620 65 622 75 627 75C632 75 634 65 634 22H722C722 110 724 120 728 120C732 120 734 110 734 22H839C839 28 841 38 846 38C851 38 853 28 853 22H957C957 65 959 75 973 75C987 75 989 65 989 22H1021C1021 65 1023 75 1036 75C1049 75 1051 65 1051 22H1135C1135 28 1137 38 1141 38C1145 38 1147 28 1147 22H1178C1178 110 1180 120 1192 120C1204 120 1206 110 1206 22H1253C1253 50 1255 60 1263 60C1271 60 1273 50 1273 22H1317C1317 20 1319 30 1331 30C1343 30 1345 20 1345 22H1440V0Z"/></svg>
@@ -272,15 +283,9 @@ footer { border-top: 6px solid var(--blood); color: var(--ash); font-size: 0.95r
 
 <section id="log">
   <div class="wrap">
-    <h2>Recent work</h2>
-    <ul class="log">
-      <li><time datetime="2026-11-18">18 November 2026</time><span>Light levels checked against the original at a street lamp, standing and crouched. All twelve test spots now match.</span></li>
-      <li><time datetime="2026-11-18">18 November 2026</time><span>Melee attacks pick the right animation for the weapon in your hand, from fists to katana.</span></li>
-      <li><time datetime="2026-11-18">18 November 2026</time><span>Movement speed in each direction now comes from the character's running animations. The old hand-measured table was off by up to 80 units a second going backwards.</span></li>
-      <li><time datetime="2026-11-17">17 November 2026</time><span>Holding a weapon changes which animations a character uses and how fast they move.</span></li>
-      <li><time datetime="2026-11-16">16 November 2026</time><span>NPCs react to what they hear: your footsteps, fights and gunshots.</span></li>
-      <li><time datetime="2026-11-14">14 November 2026</time><span>Player and NPC melee hits now sweep along the weapon's swing, with the original timing.</span></li>
-    </ul>
+    <h2>Dev diary</h2>
+    <p class="diary-meta">Updated every day from the work that landed. Last update <time id="diary-updated">…</time>.</p>
+    <div id="diary"></div>
   </div>
 </section>
 
@@ -399,6 +404,28 @@ fetch('progress.json').then(r => r.json()).then(items => {
   requestAnimationFrame(() => requestAnimationFrame(() => document.querySelector('.hero').style.setProperty('--fill', pct + '%')));
 }).catch(() => {
   document.getElementById('areas').innerHTML = '<li>Progress data could not be loaded. Try reloading the page.</li>';
+});
+// Dev diary from devlog.json, written by the daily update (tools/progress/publish_site.py).
+const longDate = iso => new Date(iso + 'T12:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+function dayHtml(d, prev) {
+  let pct = '';
+  if (d.overall != null) {
+    const delta = prev && prev.overall != null ? Math.round((d.overall - prev.overall) * 10) / 10 : null;
+    pct = `<span class="pct">${d.overall}% built${delta > 0 ? ` <span class="up">+${delta}</span>` : ''}</span>`;
+  }
+  const body = d.notes.length ? '<ul>' + d.notes.map(n => `<li>${esc(n)}</li>`).join('') + '</ul>'
+                              : '<p>No new work landed today.</p>';
+  return `<article class="day${d.notes.length ? '' : ' quiet'}"><div><time datetime="${d.date}">${longDate(d.date)}</time>${pct}</div>${body}</article>`;
+}
+fetch('devlog.json').then(r => r.json()).then(log => {
+  const days = log.days;
+  const html = days.map((d, i) => dayHtml(d, days.slice(i + 1).find(p => p.overall != null)));
+  document.getElementById('diary').innerHTML = html.slice(0, 7).join('') +
+    (html.length > 7 ? `<details><summary>Older entries</summary>${html.slice(7).join('')}</details>` : '');
+  document.getElementById('diary-updated').textContent = longDate(log.updated);
+  document.querySelectorAll('.js-updated').forEach(e => e.textContent = longDate(log.updated));
+}).catch(() => {
+  document.getElementById('diary').textContent = 'The diary could not be loaded. Try reloading the page.';
 });
 </script>
 </body>

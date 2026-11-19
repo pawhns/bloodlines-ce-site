@@ -1,0 +1,37 @@
+{
+  "updated": "2026-11-18",
+  "days": [
+    {
+      "date": "2026-11-18",
+      "overall": 50.6,
+      "notes": [
+        "Light levels checked against the original at a street lamp, standing and crouched. All twelve test spots now match.",
+        "Melee attacks pick the right animation for the weapon in your hand, from fists to katana.",
+        "Movement speed in each direction now comes from the character's running animations. The old hand-measured table was off by up to 80 units a second going backwards.",
+        "This fan page went up."
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "overall": null,
+      "notes": [
+        "Holding a weapon changes which animations a character uses and how fast they move."
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "overall": null,
+      "notes": [
+        "NPCs react to what they hear: your footsteps, fights and gunshots.",
+        "Dogs bite, using the same melee system as everyone else."
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "overall": null,
+      "notes": [
+        "Player and NPC melee hits now sweep along the weapon's swing, with the original timing."
+      ]
+    }
+  ]
+}
