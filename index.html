@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloodlines CE</title>
+<meta name="description" content="An open-source engine for Vampire: The Masquerade – Bloodlines that runs on your own copy of the game.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;800&family=Spectral:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #fcfcfb;
+  --ink: #000;
+  --grey: #5f5f5f;
+  --rule: #d6d6d6;
+  --blood: #7a0909;
+  --blood-dry: #3d0505;
+  --empty: #e4e0e0;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1.125rem/1.65 Spectral, Georgia, serif;
+}
+a { color: var(--blood); text-underline-offset: 0.18em; }
+a:hover { color: var(--blood-dry); }
+:focus-visible { outline: 3px solid var(--blood); outline-offset: 3px; }
+h1, h2, h3, nav, .sheet, .phase-state, figcaption, .note, button, table { font-family: Jost, "Futura", "Century Gothic", sans-serif; }
+h2 { font-size: 2.4rem; font-weight: 300; line-height: 1.1; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; font-weight: 600; margin: 2.5rem 0 0.5rem; }
+p, li { max-width: 66ch; }
+code { font-size: 0.88em; background: #efeded; padding: 0.1em 0.3em; }
+pre { background: var(--ink); color: #f1f1f1; padding: 1rem 1.25rem; overflow-x: auto; font-size: 0.9rem; max-width: 66ch; }
+pre code { background: none; padding: 0; }
+
+/* Layout: a narrow sticky index on the left, one reading column on the right. */
+.page { display: grid; grid-template-columns: 13rem minmax(0, 1fr); gap: 4rem; max-width: 72rem; margin: 0 auto; padding: 0 2rem; }
+nav { position: sticky; top: 0; align-self: start; padding-top: 3rem; font-size: 0.95rem; }
+nav a { display: block; color: var(--ink); text-decoration: none; padding: 0.3rem 0; border-left: 2px solid transparent; padding-left: 0.75rem; }
+nav a:hover { border-left-color: var(--blood); }
+nav .home { font-weight: 800; font-size: 1.1rem; margin-bottom: 1.5rem; padding-left: 0; }
+main section { padding: 4.5rem 0; border-top: 1px solid var(--rule); }
+main section:first-child { border-top: 0; }
+
+/* Hero */
+.hero { padding-top: 3rem !important; }
+.hero h1 { font-size: clamp(3.5rem, 11vw, 8.5rem); font-weight: 800; line-height: 0.88; letter-spacing: -0.045em; margin: 0 0 2rem; }
+.hero h1 span { display: block; }
+.hero-track { display: inline-flex; align-items: center; gap: 1rem; margin: -0.5rem 0 2.5rem; font-family: Jost, sans-serif; color: var(--ink); text-decoration: none; }
+.hero-track .dot { width: 1.6rem; height: 1.6rem; }
+.hero-track .dots { gap: 0.45rem; }
+.hero .lede { font-size: 1.4rem; line-height: 1.45; max-width: 34ch; margin: 0 0 1.5rem; }
+.hero .need { color: var(--grey); max-width: 52ch; }
+.buttons { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.btn { font-family: Jost, sans-serif; font-weight: 600; padding: 0.7rem 1.3rem; text-decoration: none; border: 2px solid var(--ink); color: var(--ink); }
+.btn.primary { background: var(--blood); border-color: var(--blood); color: #fff; }
+.btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+/* Character-sheet dot tracks: the page's one loud device. */
+.sheet { margin: 0; padding: 0; list-style: none; max-width: 40rem; }
+.trait { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 0.75rem; padding: 0.35rem 0; }
+.trait .name { font-weight: 400; }
+.trait .leader { border-bottom: 1px dotted var(--grey); transform: translateY(-0.3em); }
+.dots { display: inline-flex; gap: 0.3rem; }
+.dot { width: 0.95rem; height: 0.95rem; border-radius: 50%; border: 1.5px solid var(--ink); }
+.dot.full { background: var(--blood); border-color: var(--blood); }
+.dot.half { background: linear-gradient(90deg, var(--blood) 50%, transparent 50%); border-color: var(--blood); }
+.trait .count { grid-column: 1 / -1; font-size: 0.85rem; color: var(--grey); margin-top: -0.2rem; }
+.big .trait { padding: 0.8rem 0; }
+.big .name { font-size: 1.35rem; }
+.big .dot { width: 1.35rem; height: 1.35rem; }
+.score { font-family: Jost, sans-serif; font-size: 5rem; font-weight: 800; color: var(--blood); line-height: 1; margin: 0; }
+.score small { font-size: 1.2rem; font-weight: 400; color: var(--ink); margin-left: 0.5rem; }
+details { max-width: 40rem; border-bottom: 1px solid var(--rule); }
+details summary { cursor: pointer; font-family: Jost, sans-serif; padding: 0.6rem 0; }
+details .sheet { padding: 0 0 1rem 1rem; font-size: 0.95rem; }
+details .dot { width: 0.7rem; height: 0.7rem; }
+
+/* Phases: a real sequence, so numbered. */
+.phases { list-style: none; padding: 0; margin: 0; counter-reset: phase -1; max-width: 46rem; }
+.phases li { counter-increment: phase; display: grid; grid-template-columns: 3rem 1fr; gap: 0 1rem; padding: 1rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
+.phases li::before { content: counter(phase); font-family: Jost, sans-serif; font-size: 2rem; font-weight: 300; line-height: 1; grid-row: span 2; }
+.phases li.done::before { color: var(--blood); font-weight: 600; }
+.phases li.now { border-left: 4px solid var(--blood); padding-left: 1rem; margin-left: calc(-1rem - 4px); }
+.phases strong { font-family: Jost, sans-serif; font-weight: 600; }
+.phase-state { font-size: 0.9rem; color: var(--grey); margin-left: 0.5rem; }
+.phases p { margin: 0.2rem 0 0; font-size: 1rem; }
+
+.log { list-style: none; padding: 0; max-width: 46rem; }
+.log li { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); max-width: none; }
+.log time { font-family: Jost, sans-serif; font-weight: 600; display: block; font-size: 0.95rem; }
+
+table { border-collapse: collapse; width: 100%; max-width: 46rem; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.5rem 0.75rem 0.5rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; }
+td code { white-space: nowrap; }
+.note { font-size: 0.9rem; color: var(--grey); }
+footer { border-top: 4px solid var(--blood); padding: 2rem 0 4rem; font-size: 0.95rem; color: var(--grey); }
+
+@media (max-width: 52rem) {
+  .page { grid-template-columns: 1fr; gap: 0; padding: 0 1.25rem; }
+  nav { position: static; padding-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 0 1.25rem; }
+  nav .home { width: 100%; margin-bottom: 0.5rem; }
+  nav a { padding-left: 0; border-left: 0; }
+  h2 { font-size: 2rem; }
+  main section { padding: 3rem 0; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+<nav aria-label="Sections">
+  <a class="home" href="#top">Bloodlines CE</a>
+  <a href="#progress">Progress</a>
+  <a href="#roadmap">Roadmap</a>
+  <a href="#works">What works</a>
+  <a href="#log">Recent work</a>
+  <a href="#install">Download</a>
+  <a href="#docs">Documentation</a>
+  <a href="#rules">How it's made</a>
+</nav>
+
+<main id="top">
+<section class="hero">
+  <h1>Bloodlines <span>CE</span></h1>
+  <a class="hero-track" id="hero-track" href="#progress" aria-label="Progress"></a>
+  <p class="lede">The 2004 Vampire: The Masquerade – Bloodlines, running on a new, open-source engine.</p>
+  <p class="need">Same maps, same quests, same dialogue. Bloodlines CE reads them from your own copy of the game (GOG or Steam, with the Unofficial Patch) and runs them on Godot 4 and modern C++ in place of the original executables. It ships with no game files.</p>
+  <p class="need">It is not playable from start to finish yet. The tutorial runs, combat is being matched to the original, and the progress below is regenerated from the code as it grows.</p>
+  <div class="buttons">
+    <a class="btn primary" href="#progress">See how far along it is</a>
+  </div>
+</section>
+
+<section id="progress">
+  <h2>Progress</h2>
+  <p>Every map in the game is scanned for the objects it places, the events those objects send each other, and the script functions the quests call. Each of those counts once it works in Bloodlines CE. Each dot is a tenth of the way there.</p>
+  <p class="score" id="overall" aria-live="polite">…<small>of what the game uses</small></p>
+  <ul class="sheet big" id="areas"></ul>
+  <div id="groups"></div>
+  <p class="note" id="progress-note">Counted across all 108 maps. Last regenerated 18 November 2026.</p>
+</section>
+
+<section id="roadmap">
+  <h2>Roadmap</h2>
+  <p>The work goes one phase at a time, and a phase only closes when its acceptance test passes.</p>
+  <ol class="phases">
+    <li class="done"><strong>Foundation</strong><span class="phase-state">done</span><p>Build system, Windows and Linux CI, and a tool that inventories a game install.</p></li>
+    <li class="done"><strong>Reading the game's files</strong><span class="phase-state">done</span><p>Archives, textures, maps, models, materials, dialogue and lip sync. Every file in a full install opens.</p></li>
+    <li class="done"><strong>Map viewer</strong><span class="phase-state">done</span><p>All maps render with their textures, baked lighting, skyboxes, water and props.</p></li>
+    <li class="done"><strong>World and movement</strong><span class="phase-state">done</span><p>Walking, running, crouching, jumping, doors and level transitions.</p></li>
+    <li class="done"><strong>Scripting and dialogue</strong><span class="phase-state">done</span><p>The game's quest scripts run in embedded Python. The tutorial conversation with Jack plays through, branching by clan.</p></li>
+    <li class="done"><strong>Character systems</strong><span class="phase-state">done</span><p>Attributes, abilities, feats, disciplines, clans, experience and character creation, read from the game's own rule files.</p></li>
+    <li class="now"><strong>Combat, AI and stealth</strong><span class="phase-state">in progress</span><p>Melee, firearms, NPC states, hearing and detection, feeding. Left to do: NPC pathing, the rest of the first hub's fights, and measuring damage against the original.</p></li>
+    <li><strong>Saves and interface</strong><span class="phase-state">not started</span><p>Save and load, inventory, journal, map, and settings including widescreen UI and key binding.</p></li>
+    <li><strong>Parity pass</strong><span class="phase-state">not started</span><p>A full playthrough with every clan, with each difference from the original written down and either kept or fixed.</p></li>
+  </ol>
+</section>
+
+<section id="works">
+  <h2>What works today</h2>
+  <h3>The world</h3>
+  <ul>
+    <li>Every map loads with world geometry, displacements, baked lightmaps, skyboxes, water, brush entities and static props, at hundreds of frames per second.</li>
+    <li>Doors, lifts, trigger zones, level transitions and ambient sound.</li>
+    <li>How visible you are in the dark follows the map's lighting. Twelve spots checked in the original all match.</li>
+  </ul>
+  <h3>Your character</h3>
+  <ul>
+    <li>Character creation with all seven clans. Stats, feats, costs and experience come from the game's rule files.</li>
+    <li>Run, walk, sneak and jump speeds come from your clan's body model, as in the original: 188 units a second running forward, 205.5 running back.</li>
+    <li>Falls, jumps and view punch, ported from how the original handles them.</li>
+  </ul>
+  <h3>Talking</h3>
+  <ul>
+    <li>Conversations with voices, lip sync, facial expressions, gestures and the original dialogue frame and fonts.</li>
+    <li>Clan-specific lines, including Malkavian replies, and the Persuasion, Intimidate, Seduction and Dominate options.</li>
+  </ul>
+  <h3>Fighting</h3>
+  <ul>
+    <li>Melee for the player and NPCs, each weapon with its own animations. Dogs bite.</li>
+    <li>NPCs hear footsteps and gunfire. Every fight in the tutorial can be won.</li>
+  </ul>
+</section>
+
+<section id="log">
+  <h2>Recent work</h2>
+  <ul class="log">
+    <li><time datetime="2026-11-18">18 November 2026</time>Light levels checked against the original at a street lamp, standing and crouched. All twelve test spots now match.</li>
+    <li><time datetime="2026-11-18">18 November 2026</time>Melee attacks pick the right animation for the weapon in your hand, from fists to katana.</li>
+    <li><time datetime="2026-11-18">18 November 2026</time>Movement speed in each direction now comes from the character's running animations. The old hand-measured table was off by up to 80 units a second going backwards.</li>
+    <li><time datetime="2026-11-17">17 November 2026</time>Holding a weapon changes which animations a character uses and how fast they move.</li>
+    <li><time datetime="2026-11-16">16 November 2026</time>NPCs react to what they hear: your footsteps, fights and gunshots.</li>
+    <li><time datetime="2026-11-14">14 November 2026</time>Player and NPC melee hits now sweep along the weapon's swing, with the original timing.</li>
+  </ul>
+</section>
+
+<section id="install">
+  <h2>Download</h2>
+  <p>There is nothing to download yet. The first build will be posted here once the tutorial plays start to finish from a packaged release.</p>
+  <p>When it comes, you will need your own copy of Vampire: The Masquerade – Bloodlines from GOG or Steam, with the Unofficial Patch installed. Bloodlines CE reads the game's files from that install and ships none of its own.</p>
+</section>
+
+<section id="docs">
+  <h2>Documentation</h2>
+  <p>Everything Bloodlines CE knows about the original game is written down in plain language before any code is written for it. When the source opens, these documents will be the place to start if you want to mod the game, write your own tools, or check our work.</p>
+  <h3>File formats</h3>
+  <table>
+    <thead><tr><th>Format</th><th>What's in it</th><th>Checked against</th></tr></thead>
+    <tbody>
+      <tr><td>Archives <code>.vpk</code></td><td>Packed game data</td><td>15 of 15 packs</td></tr>
+      <tr><td>Textures <code>.tth/.ttz</code></td><td>Split header and pixel files</td><td>11,489 of 11,494 (5 are broken in the original)</td></tr>
+      <tr><td>Maps <code>.bsp</code></td><td>Geometry, lighting, entities, props</td><td>209 of 209</td></tr>
+      <tr><td>Models <code>.mdl</code></td><td>Meshes, skeletons, animations, faces</td><td>4,552 of 4,560 (8 patch models lack a <code>.vtx</code>)</td></tr>
+      <tr><td>Materials <code>.vmt</code></td><td>Shaders and texture settings</td><td>18,946 of 18,946</td></tr>
+      <tr><td>Dialogue <code>.dlg</code></td><td>Lines, replies and their conditions</td><td>288 of 288</td></tr>
+      <tr><td>Lip sync <code>.lip</code></td><td>Phoneme timing and captions</td><td>12,515 of 12,515</td></tr>
+      <tr><td>Scenes <code>.vcd</code></td><td>Gestures and expressions per line</td><td>Every file</td></tr>
+      <tr><td>Sound <code>.wav</code></td><td>PCM and ADPCM audio</td><td>Every file</td></tr>
+    </tbody>
+  </table>
+  <h3>How the game behaves</h3>
+  <ul>
+    <li>Character rules: attributes, abilities, feats, clans and experience costs.</li>
+    <li>Disciplines.</li>
+    <li>Combat: melee, firearms, damage and NPC fighting.</li>
+    <li>Movement: speeds, jumps and falls, with the measurements.</li>
+    <li>World: entities, triggers, doors and level changes.</li>
+    <li>Script API: every function the quest scripts call, and how often.</li>
+    <li>Open questions: what isn't known yet and what has been tried.</li>
+  </ul>
+  <h3>Command-line tools</h3>
+  <p>Each tool takes one file, or a folder to check everything in it, archives included.</p>
+  <table>
+    <thead><tr><th>Tool</th><th>What it does</th></tr></thead>
+    <tbody>
+      <tr><td><code>inventory</code></td><td>Lists every file type in an install with counts, sizes and magic bytes</td></tr>
+      <tr><td><code>vpkdump</code></td><td>Summarises an archive, or lists every entry</td></tr>
+      <tr><td><code>texdump</code></td><td>Prints a texture header, or decode-checks every texture</td></tr>
+      <tr><td><code>bspdump</code></td><td>Summarises a map, or validates every map</td></tr>
+      <tr><td><code>mdldump</code></td><td>Prints a model's parts, meshes, materials and root motion</td></tr>
+      <tr><td><code>dlgdump</code></td><td>Counts dialogue rows and flags problems</td></tr>
+      <tr><td><code>lipdump</code></td><td>Prints the words, phonemes and captions of a lip sync file</td></tr>
+      <tr><td><code>vmtdump</code></td><td>Shows one material, or checks every material and map surface</td></tr>
+    </tbody>
+  </table>
+  <p>Decisions about the project itself are recorded as architecture decision records, one for each finished phase.</p>
+  <p class="note">The documents themselves will be published with the source code.</p>
+</section>
+
+<section id="rules">
+  <h2>How it's made</h2>
+  <p>Bloodlines CE is a port, not a remake. The goal is the game you remember, bugs and all, on an engine that can be fixed and extended in source. When the port and the original disagree, the original is right until someone has measured it.</p>
+  <ul>
+    <li>No game files go in the repository. You bring your own copy.</li>
+    <li>No decompiled code and no leaked Valve source. What's learned from the original game's binaries, data files and measurements is written up as plain-language specs first, and the code is written from those.</li>
+    <li>Behaviour is checked against the original by playing it: speeds, light levels and timings are measured in the 2004 game and compared.</li>
+    <li>Fixes from the Unofficial Patch are reviewed one by one. Each is either kept or reproduced as it was, and the decision is written down.</li>
+  </ul>
+  <p>The code is GPL-3.0 on top of the MIT-licensed Godot engine.</p>
+</section>
+</main>
+</div>
+
+<div class="page">
+<div></div>
+<footer>
+  <p>Bloodlines CE is a fan project. It isn't affiliated with or endorsed by Paradox Interactive, World of Darkness, Activision or Troika Games, and it includes no game content. Vampire: The Masquerade is a trademark of Paradox Interactive AB. You need a legally owned copy of Vampire: The Masquerade – Bloodlines to use it.</p>
+</footer>
+</div>
+
+<script>
+// Fills the progress section from progress.json (written by tools/progress/progress.py).
+// Same math as docs/progress.svg: share of kinds working per area, overall is the mean of the areas.
+const DOTS = 10;
+function track(share, dots) {
+  const filled = share * dots;
+  let html = '<span class="dots" aria-hidden="true">';
+  for (let i = 0; i < dots; i++) {
+    const cls = filled >= i + 0.75 ? ' full' : filled >= i + 0.25 ? ' half' : '';
+    html += `<span class="dot${cls}"></span>`;
+  }
+  return html + '</span>';
+}
+function tally(items) {
+  const n = items.filter(i => i.done).length;
+  return { share: items.length ? n / items.length : 0, n, total: items.length };
+}
+function row(name, t, dots, detail) {
+  const pct = Math.round(t.share * 100);
+  return `<li class="trait"><span class="name">${name}</span><span class="leader"></span>${track(t.share, dots)}
+    <span class="count">${pct}% ${detail} (${t.n} of ${t.total} kinds)</span></li>`;
+}
+const esc = s => s.replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const AREA_TEXT = {
+  'World objects': 'of the objects placed in maps',
+  'Map events': 'of the events maps send',
+  'Quest & dialogue scripting': 'of the script calls quests make',
+};
+fetch('progress.json').then(r => r.json()).then(items => {
+  const areas = [...new Set(items.map(i => i.area))];
+  const overall = areas.reduce((sum, a) => sum + tally(items.filter(i => i.area === a)).share, 0) / areas.length;
+  document.getElementById('hero-track').innerHTML = `${track(overall, DOTS)}<span>${Math.round(overall * 100)}% built</span>`;
+  document.getElementById('overall').innerHTML = `${Math.round(overall * 100)}%<small>of what the game uses</small>`;
+  document.getElementById('areas').innerHTML = areas.map(a =>
+    row(esc(a), tally(items.filter(i => i.area === a)), DOTS, AREA_TEXT[a] || '')).join('');
+  document.getElementById('groups').innerHTML = areas.map(a => {
+    const inArea = items.filter(i => i.area === a);
+    const groups = [...new Set(inArea.map(i => i.group))].sort();
+    return `<details><summary>${esc(a)}, by kind</summary><ul class="sheet">` +
+      groups.map(g => row(esc(g), tally(inArea.filter(i => i.group === g)), 5, 'working')).join('') +
+      '</ul></details>';
+  }).join('');
+}).catch(() => {
+  document.getElementById('overall').textContent = 'Progress data could not be loaded.';
+});
+</script>
+</body>
+</html>

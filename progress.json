@@ -1,0 +1,4104 @@
+[
+{
+"name": "worldspawn",
+"group": "Map settings",
+"uses": 108,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_particle",
+"group": "Effects",
+"uses": 1302,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_dynamic",
+"group": "Props & usables",
+"uses": 4454,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_player_start",
+"group": "Spawn points & AI markers",
+"uses": 123,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_door_rotating",
+"group": "Doors, lifts & buttons",
+"uses": 1231,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "light_spot",
+"group": "Lights",
+"uses": 8185,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_landmark",
+"group": "Spawn points & AI markers",
+"uses": 392,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_changelevel",
+"group": "Trigger zones",
+"uses": 382,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vdialogpedestrian",
+"group": "Characters",
+"uses": 54,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "light",
+"group": "Lights",
+"uses": 8511,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "infodecal",
+"group": "Decals",
+"uses": 5140,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "ambient_generic",
+"group": "Sounds",
+"uses": 1636,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_relay",
+"group": "Game logic",
+"uses": 1115,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_dynamic-wesp",
+"group": "Props & usables",
+"uses": 22,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_doorknob",
+"group": "Props & usables",
+"uses": 711,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_doorknob-wesp",
+"group": "Props & usables",
+"uses": 20,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "env_sprite",
+"group": "Effects",
+"uses": 6443,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "scripted_sequence",
+"group": "Scripted scenes",
+"uses": 682,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "ambient_soundscheme",
+"group": "Sounds",
+"uses": 179,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_auto",
+"group": "Game logic",
+"uses": 265,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_timer",
+"group": "Game logic",
+"uses": 242,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "params_particle",
+"group": "Effects",
+"uses": 227,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "events_player",
+"group": "Player & world events",
+"uses": 175,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "events_world",
+"group": "Player & world events",
+"uses": 108,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_physics",
+"group": "Props & usables",
+"uses": 1505,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "phys_ballsocket",
+"group": "Physics joints",
+"uses": 84,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_button",
+"group": "Props & usables",
+"uses": 95,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "light_dynamic",
+"group": "Lights",
+"uses": 36,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_door",
+"group": "Doors, lifts & buttons",
+"uses": 214,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vpedestrian",
+"group": "Characters",
+"uses": 386,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_dynamic_ornament",
+"group": "Props & usables",
+"uses": 43,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vhumancombatant",
+"group": "Characters",
+"uses": 561,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node",
+"group": "Spawn points & AI markers",
+"uses": 8353,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "intersting_place",
+"group": "Spawn points & AI markers",
+"uses": 1293,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_pythoncheck",
+"group": "Game logic",
+"uses": 94,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_brush",
+"group": "Doors, lifts & buttons",
+"uses": 922,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_multiple",
+"group": "Trigger zones",
+"uses": 723,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_stealth_mod",
+"group": "Trigger zones",
+"uses": 80,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_watch_normal",
+"group": "Items & loot",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "inspection_node",
+"group": "Spawn points & AI markers",
+"uses": 288,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_sign",
+"group": "Props & usables",
+"uses": 95,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_elevator",
+"group": "Doors, lifts & buttons",
+"uses": 15,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "point_teleport",
+"group": "Teleports & targets",
+"uses": 145,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_wireless_camera_4",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "phys_constraint",
+"group": "Physics joints",
+"uses": 78,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vhengeyokai",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "light_environment",
+"group": "Lights",
+"uses": 34,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "keyframe_rope",
+"group": "Ropes",
+"uses": 1969,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "move_rope",
+"group": "Ropes",
+"uses": 712,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "params_explosion",
+"group": "Effects",
+"uses": 52,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vyukie",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_shoot_at",
+"group": "Spawn points & AI markers",
+"uses": 20,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_cover_med",
+"group": "Spawn points & AI markers",
+"uses": 431,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vcamera",
+"group": "Characters",
+"uses": 87,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "point_explosion",
+"group": "Teleports & targets",
+"uses": 93,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "camera_cinematic",
+"group": "Cut-scene cameras",
+"uses": 51,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "point_target",
+"group": "Teleports & targets",
+"uses": 279,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_button",
+"group": "Doors, lifts & buttons",
+"uses": 162,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_m_money_clip",
+"group": "Items & loot",
+"uses": 11,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "camera_track",
+"group": "Cut-scene cameras",
+"uses": 168,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "camera_keyframe",
+"group": "Cut-scene cameras",
+"uses": 712,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_hacking",
+"group": "Props & usables",
+"uses": 64,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_once",
+"group": "Trigger zones",
+"uses": 440,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_breakable",
+"group": "Doors, lifts & buttons",
+"uses": 153,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_destructable",
+"group": "Props & usables",
+"uses": 45,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_areaportalwindow",
+"group": "Doors, lifts & buttons",
+"uses": 246,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_areaportal",
+"group": "Doors, lifts & buttons",
+"uses": 244,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_illusionary",
+"group": "Doors, lifts & buttons",
+"uses": 661,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_doorknob_electronic",
+"group": "Props & usables",
+"uses": 55,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_monitor",
+"group": "Doors, lifts & buttons",
+"uses": 22,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "point_camera",
+"group": "Teleports & targets",
+"uses": 37,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "math_counter",
+"group": "Game logic",
+"uses": 34,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_beam",
+"group": "Effects",
+"uses": 47,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_target",
+"group": "Spawn points & AI markers",
+"uses": 12,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_movelinear",
+"group": "Doors, lifts & buttons",
+"uses": 33,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_breakable_surf",
+"group": "Doors, lifts & buttons",
+"uses": 130,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_cover_corner",
+"group": "Spawn points & AI markers",
+"uses": 1438,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_hurt",
+"group": "Trigger zones",
+"uses": 235,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_shake",
+"group": "Effects",
+"uses": 60,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_rotating",
+"group": "Doors, lifts & buttons",
+"uses": 119,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "filter_activator_class",
+"group": "Other",
+"uses": 6,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vvampire",
+"group": "Characters",
+"uses": 157,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_keypad",
+"group": "Props & usables",
+"uses": 17,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_push",
+"group": "Trigger zones",
+"uses": 26,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_hg_melee",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "phys_convert",
+"group": "Physics joints",
+"uses": 56,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "env_physimpact",
+"group": "Effects",
+"uses": 154,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_ragdoll",
+"group": "Props & usables",
+"uses": 52,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_wireless_camera_3",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_katana",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_switch",
+"group": "Props & usables",
+"uses": 166,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_cover_low",
+"group": "Spawn points & AI markers",
+"uses": 269,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_hint",
+"group": "Spawn points & AI markers",
+"uses": 29,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_hint",
+"group": "Spawn points & AI markers",
+"uses": 36,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "logic_visibility_test",
+"group": "Game logic",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_ring03",
+"group": "Items & loot",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_electric_bugaloo",
+"group": "Trigger zones",
+"uses": 6,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_maker",
+"group": "Characters",
+"uses": 274,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "intersting_place_conversation",
+"group": "Spawn points & AI markers",
+"uses": 49,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_patrol_point",
+"group": "Spawn points & AI markers",
+"uses": 579,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_look",
+"group": "Trigger zones",
+"uses": 53,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_payphone",
+"group": "Characters",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_lod",
+"group": "Doors, lifts & buttons",
+"uses": 357,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vtaxidriver",
+"group": "Characters",
+"uses": 16,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "filter_activator_name",
+"group": "Other",
+"uses": 34,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "sky_camera",
+"group": "Sky",
+"uses": 44,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vcop",
+"group": "Characters",
+"uses": 16,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_dustmotes",
+"group": "Doors, lifts & buttons",
+"uses": 82,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_padlock",
+"group": "Props & usables",
+"uses": 5,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "logic_choreographed_scene",
+"group": "Game logic",
+"uses": 121,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_container_animated",
+"group": "Items & loot",
+"uses": 78,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_ring_gold",
+"group": "Items & loot",
+"uses": 5,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_watch_fancy",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_m_money_envelope",
+"group": "Items & loot",
+"uses": 7,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_physbox",
+"group": "Doors, lifts & buttons",
+"uses": 179,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_radio",
+"group": "Props & usables",
+"uses": 9,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_wireless_camera_2",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "hud_timer",
+"group": "Other",
+"uses": 8,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_sabbatleader_attack",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_container_lock",
+"group": "Items & loot",
+"uses": 21,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vrat",
+"group": "Characters",
+"uses": 100,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_pushable",
+"group": "Doors, lifts & buttons",
+"uses": 11,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "filter_activator_mass",
+"group": "Other",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vchangbros",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "inspection_brush",
+"group": "Spawn points & AI markers",
+"uses": 34,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_chang_ledge",
+"group": "Spawn points & AI markers",
+"uses": 37,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_container_one_item_filtered",
+"group": "Items & loot",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_idol_cat",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_idol_elephant",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_idol_dragon",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_idol_crane",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "filter_activator_inventory",
+"group": "Other",
+"uses": 13,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "filter_multi",
+"group": "Other",
+"uses": 4,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vmingxiao",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_tzimisce",
+"group": "Spawn points & AI markers",
+"uses": 19,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_k_sarcophagus_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_fade",
+"group": "Effects",
+"uses": 83,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_car_stereo",
+"group": "Items & loot",
+"uses": 9,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_drugs_morphine_bottle",
+"group": "Items & loot",
+"uses": 14,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_jumbles_flyer",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vtzimiscerunner",
+"group": "Characters",
+"uses": 70,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_physexplosion",
+"group": "Effects",
+"uses": 61,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_small_hull",
+"group": "Trigger zones",
+"uses": 46,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_teleport_2",
+"group": "Spawn points & AI markers",
+"uses": 9,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_maker_fleshpile",
+"group": "Characters",
+"uses": 12,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_teleport_1",
+"group": "Spawn points & AI markers",
+"uses": 25,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vandreiblood",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vsabbatleader",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_occult_heal_rate",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_hengeyokai_fist",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_haunted",
+"group": "Props & usables",
+"uses": 145,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vhunter",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_particle",
+"group": "Doors, lifts & buttons",
+"uses": 98,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "mover_keyframe",
+"group": "Moving things",
+"uses": 122,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "func_keyframed_mover",
+"group": "Doors, lifts & buttons",
+"uses": 55,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "env_shooter",
+"group": "Effects",
+"uses": 21,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_climb",
+"group": "Spawn points & AI markers",
+"uses": 4,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_environmental_audio",
+"group": "Trigger zones",
+"uses": 252,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_maker_zombie",
+"group": "Characters",
+"uses": 114,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vzombie",
+"group": "Characters",
+"uses": 48,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "infodecal-wesp",
+"group": "Other",
+"uses": 37,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vgargoyle",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_case",
+"group": "Game logic",
+"uses": 29,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_garys_film",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_crosswalk",
+"group": "Spawn points & AI markers",
+"uses": 22,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "env_steam",
+"group": "Effects",
+"uses": 11,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "aiscripted_schedule",
+"group": "Other",
+"uses": 30,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "aiscripted_sequence",
+"group": "Other",
+"uses": 14,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_severed_arm",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_netcafe_office_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_m_wallet",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_junkyard_businesscard",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_drugs_perscription_bottle",
+"group": "Items & loot",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_horrortape_2",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_teleport_destination",
+"group": "Spawn points & AI markers",
+"uses": 18,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_p_research_hg_computers",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vnewscaster",
+"group": "Characters",
+"uses": 7,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_npc_condition",
+"group": "Game logic",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_warr_clipboard",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_warr_ledger_1",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vdog",
+"group": "Characters",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_glock_17c",
+"group": "Items & loot",
+"uses": 9,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_teleport",
+"group": "Trigger zones",
+"uses": 30,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vtzimisceheadclaw",
+"group": "Characters",
+"uses": 10,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vtzimisce",
+"group": "Characters",
+"uses": 10,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_warr_ledger_2",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vsabbatgunman",
+"group": "Characters",
+"uses": 21,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_warrens4_passkey",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_bertrams_cd",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_occult_passive_durations",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_bluebloodpack",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_lucky_star_murder_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_physics_contested",
+"group": "Props & usables",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vlasombra",
+"group": "Characters",
+"uses": 6,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_ithaca_m_37",
+"group": "Items & loot",
+"uses": 10,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_mac_10",
+"group": "Items & loot",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_case_toggle",
+"group": "Game logic",
+"uses": 12,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_flamethrower",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_occultblade",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_arch",
+"group": "Spawn points & AI markers",
+"uses": 15,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_hide",
+"group": "Spawn points & AI markers",
+"uses": 5,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_top",
+"group": "Spawn points & AI markers",
+"uses": 12,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_nojump",
+"group": "Spawn points & AI markers",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_bottom",
+"group": "Spawn points & AI markers",
+"uses": 11,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_torch",
+"group": "Items & loot",
+"uses": 5,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_sabbat_dive",
+"group": "Spawn points & AI markers",
+"uses": 6,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_gargoyle_fist",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_occult_thaum_damage",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_gargoyle_book",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vhuman",
+"group": "Characters",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_ring_silver",
+"group": "Items & loot",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_edane_report",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_floating_camera",
+"group": "Effects",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_edane_print_report",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_empire_jezebel_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_mg_brawl",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_mg_finance",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_brotherhood_flyer",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_milligans_businesscard",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vvampireboss",
+"group": "Characters",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vscurrying",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_drugs_pill_bottle",
+"group": "Items & loot",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "game_ui",
+"group": "Popups & text",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "game_sign",
+"group": "Popups & text",
+"uses": 73,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_werewolf_attacks",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vghoulcroucher",
+"group": "Characters",
+"uses": 56,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "filter_activator_feat",
+"group": "Other",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_p_research_lg_dodge",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_manbat_claw",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_tzimisce3_claw",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_occult_frenzy",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_malkavian_refrigerator_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_bloodpack",
+"group": "Items & loot",
+"uses": 3,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_eldervitaepack",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_impact",
+"group": "Trigger zones",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "security_camera",
+"group": "Other",
+"uses": 18,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vcamerasecurity",
+"group": "Characters",
+"uses": 5,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vhumancombatpatrol",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_pisha_fetish",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_museum_basement_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_mg_security",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_museum_storeroom_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_museum_office_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_larry_briefcase",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "phys_animlink",
+"group": "Physics joints",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "phys_constraintsystem",
+"group": "Physics joints",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_player_activity_level",
+"group": "Trigger zones",
+"uses": 7,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_hannahs_safe_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_hannahs_appt_book",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_mg_melee",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_garys_photo",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_zombie_fists",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "logic_squad_condition",
+"group": "Game logic",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_bomb_site",
+"group": "Trigger zones",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_inventory_check",
+"group": "Trigger zones",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vsheriffman",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_teleport_3",
+"group": "Spawn points & AI markers",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_manbat_fly_to_point",
+"group": "Spawn points & AI markers",
+"uses": 13,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vmanbat",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_chang_column",
+"group": "Spawn points & AI markers",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_sheriff_sword",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vpronedialog",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_tatoo_parlor_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_mercurio_journal",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_lg_firearms",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_astrolite",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_discipline_context",
+"group": "Trigger zones",
+"uses": 8,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_kick_over",
+"group": "Spawn points & AI markers",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_mover",
+"group": "Props & usables",
+"uses": 6,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_lilly_purse",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_slashable",
+"group": "Props & usables",
+"uses": 4,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_cash_box",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_lilly_diary",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_tire_iron",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vmercurio",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_basevampai",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_clinic_maintenance_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_malcolm_office_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_gimble_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_lg_computers",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_werewolf_bloodpack",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vbrujah",
+"group": "Characters",
+"uses": 5,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_ghost_pendant",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "env_particle_hud",
+"group": "Effects",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_g_oh_diary",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_fireaxe",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "game_text",
+"group": "Popups & text",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "phys_hinge",
+"group": "Physics joints",
+"uses": 43,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_k_murietta_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "func_physbox-wesp",
+"group": "Doors, lifts & buttons",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_p_research_lg_stealth",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_autosave",
+"group": "Trigger zones",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_mingxiao_tentacle",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_stake",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vasianvampire",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_chang_jumpbase",
+"group": "Spawn points & AI markers",
+"uses": 6,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_thirtyeight",
+"group": "Items & loot",
+"uses": 4,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_lockpick",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "trigger_checkvolume",
+"group": "Trigger zones",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "phys_thruster",
+"group": "Physics joints",
+"uses": 3,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_p_research_hg_dodge",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_pisha_book",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_occult_experience",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_tzimisce_melee",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_link",
+"group": "Spawn points & AI markers",
+"uses": 6,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vchangbrosblade",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vchangbrosclaw",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_chang_teleport",
+"group": "Spawn points & AI markers",
+"uses": 43,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "prop_largehull_ignore",
+"group": "Props & usables",
+"uses": 37,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_werewolf_hint",
+"group": "Spawn points & AI markers",
+"uses": 132,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "npc_vwerewolf",
+"group": "Characters",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_werewolf",
+"group": "Spawn points & AI markers",
+"uses": 80,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "trigger_werewolf_zone",
+"group": "Trigger zones",
+"uses": 11,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "prop_clockhand",
+"group": "Props & usables",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_k_leopold_int_key",
+"group": "Items & loot",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_bach_journal",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_g_vampyr_apocrypha",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_p_research_hg_firearms",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_w_steyr_aug",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "item_k_ash_cell_key",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "npc_vbach",
+"group": "Characters",
+"uses": 2,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_teleport_4",
+"group": "Spawn points & AI markers",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_run_2",
+"group": "Spawn points & AI markers",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "info_node_bach_run_1",
+"group": "Spawn points & AI markers",
+"uses": 1,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_container",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "ai_changetarget",
+"group": "Other",
+"uses": 2,
+"done": false,
+"area": "World objects"
+},
+{
+"name": "item_w_claws_protean5",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "World objects"
+},
+{
+"name": "changenow",
+"group": "Trigger zones",
+"uses": 284,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "beginsequence",
+"group": "Scripted scenes",
+"uses": 173,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "playsound",
+"group": "Sounds",
+"uses": 356,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setsafearea",
+"group": "Player & world events",
+"uses": 13,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "close",
+"group": "Doors, lifts & buttons",
+"uses": 96,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "trigger",
+"group": "Game logic",
+"uses": 1084,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "holster",
+"group": "Scripts & players",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "scriptunhide",
+"group": "Doors, lifts & buttons",
+"uses": 355,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setstate",
+"group": "Props & usables",
+"uses": 15,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "cancelsequence",
+"group": "Scripted scenes",
+"uses": 23,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "kill",
+"group": "Sounds",
+"uses": 608,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "test",
+"group": "Game logic",
+"uses": 58,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setrelationship",
+"group": "Characters",
+"uses": 82,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "lock",
+"group": "Props & usables",
+"uses": 104,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "unlock",
+"group": "Props & usables",
+"uses": 134,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "scripthide",
+"group": "Doors, lifts & buttons",
+"uses": 268,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "gotofloor",
+"group": "Doors, lifts & buttons",
+"uses": 46,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "willtalk",
+"group": "Characters",
+"uses": 58,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "open",
+"group": "Doors, lifts & buttons",
+"uses": 149,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "endshot",
+"group": "Cut-scene cameras",
+"uses": 19,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startplayerdialog",
+"group": "Characters",
+"uses": 43,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "explode",
+"group": "Teleports & targets",
+"uses": 64,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "removecontrollernpc",
+"group": "Player & world events",
+"uses": 25,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startplayerdialogremote",
+"group": "Characters",
+"uses": 37,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "disable",
+"group": "Trigger zones",
+"uses": 249,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "enable",
+"group": "Trigger zones",
+"uses": 269,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setattached",
+"group": "Props & usables",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setsoundoverrideent",
+"group": "Characters",
+"uses": 14,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "turnon",
+"group": "Effects",
+"uses": 146,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "subtract",
+"group": "Game logic",
+"uses": 37,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "add",
+"group": "Game logic",
+"uses": 60,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "stopsound",
+"group": "Sounds",
+"uses": 135,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setscripteddiscipline",
+"group": "Characters",
+"uses": 39,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "impact",
+"group": "Effects",
+"uses": 43,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "turnoff",
+"group": "Lights",
+"uses": 127,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "fadein",
+"group": "Sounds",
+"uses": 106,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "fleeanddie",
+"group": "Characters",
+"uses": 16,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "createcontrollernpc",
+"group": "Player & world events",
+"uses": 20,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startplayerdialogunforced",
+"group": "Characters",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setnofrenzyarea",
+"group": "Player & world events",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "fadeout",
+"group": "Sounds",
+"uses": 85,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "checkvisibility",
+"group": "Game logic",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setpattern",
+"group": "Lights",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startshot",
+"group": "Cut-scene cameras",
+"uses": 19,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "hidesprite",
+"group": "Effects",
+"uses": 25,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "showsprite",
+"group": "Effects",
+"uses": 23,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "followpatrolpath",
+"group": "Characters",
+"uses": 56,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "useinteresting",
+"group": "Characters",
+"uses": 25,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "teleporttoentity",
+"group": "Characters",
+"uses": 28,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "playascameraposition",
+"group": "Cut-scene cameras",
+"uses": 15,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "spawn",
+"group": "Characters",
+"uses": 58,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setuppatroltype",
+"group": "Characters",
+"uses": 60,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "clearpatrolpath",
+"group": "Characters",
+"uses": 10,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "start",
+"group": "Game logic",
+"uses": 65,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "cancel",
+"group": "Game logic",
+"uses": 7,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "cleardialogcombattimers",
+"group": "Player & world events",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "restarttimer",
+"group": "Other",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "awardexp",
+"group": "Player & world events",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "tweakparam",
+"group": "Characters",
+"uses": 104,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setfollowerboss",
+"group": "Characters",
+"uses": 7,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "break",
+"group": "Doors, lifts & buttons",
+"uses": 50,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setspeed",
+"group": "Doors, lifts & buttons",
+"uses": 14,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stayentrenched",
+"group": "Characters",
+"uses": 25,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setanimation",
+"group": "Props & usables",
+"uses": 26,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "disablehint",
+"group": "Spawn points & AI markers",
+"uses": 20,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "toggle",
+"group": "Props & usables",
+"uses": 27,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "shakeandfling",
+"group": "Props & usables",
+"uses": 30,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setbossmonster",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "volume",
+"group": "Sounds",
+"uses": 12,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "skin",
+"group": "Props & usables",
+"uses": 47,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setfollowertype",
+"group": "Characters",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "changeschedule",
+"group": "Characters",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setheadascameratarget",
+"group": "Characters",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "fadeheadascameratarget",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "removehealth",
+"group": "Props & usables",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "makeinvincible",
+"group": "Characters",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "takedamage",
+"group": "Characters",
+"uses": 14,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "teleport",
+"group": "Teleports & targets",
+"uses": 33,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "fade",
+"group": "Effects",
+"uses": 45,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "shoot",
+"group": "Effects",
+"uses": 4,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startshake",
+"group": "Effects",
+"uses": 12,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "pickrandom",
+"group": "Game logic",
+"uses": 37,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "walk",
+"group": "Spawn points & AI markers",
+"uses": 1,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "startschedule",
+"group": "Other",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "firetimer",
+"group": "Game logic",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "activate",
+"group": "Props & usables",
+"uses": 16,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "converttarget",
+"group": "Physics joints",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "playascameratarget",
+"group": "Cut-scene cameras",
+"uses": 10,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "restorecameratoplayercontrol",
+"group": "Cut-scene cameras",
+"uses": 7,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stop",
+"group": "Doors, lifts & buttons",
+"uses": 9,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setinvestigatemodecombat",
+"group": "Characters",
+"uses": 5,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setinvestigatemode",
+"group": "Characters",
+"uses": 4,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "this trigger also enabled via python",
+"group": "Scripts & players",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setfakesilence",
+"group": "Characters",
+"uses": 10,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "testactivator",
+"group": "Other",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "deactivate",
+"group": "Props & usables",
+"uses": 13,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setdontfaceplayerindialog",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "fadetoskin",
+"group": "Characters",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "invaluedelta",
+"group": "Game logic",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "disablecover",
+"group": "Scripts & players",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "enablehint",
+"group": "Spawn points & AI markers",
+"uses": 14,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startwaves",
+"group": "Effects",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "flingnow",
+"group": "Props & usables",
+"uses": 23,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "mobilizeplayer",
+"group": "Player & world events",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "removedisciplines",
+"group": "Player & world events",
+"uses": 4,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startmoving",
+"group": "Doors, lifts & buttons",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "togglesprite",
+"group": "Effects",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stopshake",
+"group": "Effects",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "campenter",
+"group": "Characters",
+"uses": 10,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "campexit",
+"group": "Characters",
+"uses": 10,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stairsenter",
+"group": "Characters",
+"uses": 4,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "manbatstun",
+"group": "Characters",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "removedisciplinesnow",
+"group": "Player & world events",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startattacking",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "fadetopattern",
+"group": "Lights",
+"uses": 19,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setvalue",
+"group": "Game logic",
+"uses": 9,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "rotatetodest",
+"group": "Props & usables",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "faint",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "fadeglobalwetness",
+"group": "Player & world events",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "unhidecutsceneinterferingentities",
+"group": "Player & world events",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "wake",
+"group": "Props & usables",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setcausesimpactdamage",
+"group": "Props & usables",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "spawntempparticle",
+"group": "Characters",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setskin",
+"group": "Props & usables",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stopshaking",
+"group": "Props & usables",
+"uses": 11,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "startshaking",
+"group": "Props & usables",
+"uses": 8,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "snaptofloor",
+"group": "Doors, lifts & buttons",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "addentitytocontainer",
+"group": "Items & loot",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "displaywindow",
+"group": "Popups & text",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "transformmodel",
+"group": "Scripts & players",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "lookatentitycenter",
+"group": "Characters",
+"uses": 7,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "lookatentityeye",
+"group": "Characters",
+"uses": 14,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "lookatentitydefault",
+"group": "Characters",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "stopmoving",
+"group": "Doors, lifts & buttons",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "disablethink",
+"group": "Scripts & players",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "playendcredits",
+"group": "Player & world events",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "immobilizeplayer",
+"group": "Player & world events",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "toggledoorstate",
+"group": "Characters",
+"uses": 4,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "moveforwards",
+"group": "Doors, lifts & buttons",
+"uses": 2,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "setdamageable",
+"group": "Doors, lifts & buttons",
+"uses": 5,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "pausetimer",
+"group": "Other",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "movebackwards",
+"group": "Doors, lifts & buttons",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "color",
+"group": "Effects",
+"uses": 2,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "enableflagclient",
+"group": "Trigger zones",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "disableflagclient",
+"group": "Trigger zones",
+"uses": 3,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "grenadeenter",
+"group": "Characters",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "grenadeexit",
+"group": "Characters",
+"uses": 6,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "openwindow",
+"group": "Popups & text",
+"uses": 37,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "makeplayerunkillable",
+"group": "Player & world events",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "deleteitems",
+"group": "Items & loot",
+"uses": 1,
+"done": true,
+"area": "Map events"
+},
+{
+"name": "setparent",
+"group": "Effects",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "press",
+"group": "Props & usables",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "triggercombat",
+"group": "Characters",
+"uses": 1,
+"done": false,
+"area": "Map events"
+},
+{
+"name": "npc.SetDisposition",
+"uses": 2241,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) Find",
+"uses": 1693,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) IsClan",
+"uses": 1305,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) OneOfSet",
+"uses": 589,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetQuest",
+"uses": 495,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.FindPlayer",
+"uses": 426,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetQuestState",
+"uses": 247,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.HasItem",
+"uses": 161,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SetRelationship",
+"uses": 129,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) IsDead",
+"uses": 123,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GiveItem",
+"uses": 114,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.IsMale",
+"uses": 103,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetCamera",
+"uses": 103,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.StartBarter",
+"uses": 90,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.Find",
+"uses": 87,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.ScheduleTask",
+"uses": 85,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.RemoveItem",
+"uses": 84,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.CurrentMoney",
+"uses": 81,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.MoneyRemove",
+"uses": 76,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.ChangeMap",
+"uses": 74,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.MoneyAdd",
+"uses": 73,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.CallEntitySpawn",
+"uses": 63,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.CreateEntityNoSpawn",
+"uses": 62,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) IsMale",
+"uses": 60,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) IsClan",
+"uses": 59,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.CalcFeat",
+"uses": 53,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.FindEntityByName",
+"uses": 48,
+"done": false,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SeductiveFeed",
+"uses": 48,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) IsDead",
+"uses": 48,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) FindPlayer",
+"uses": 48,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.IsClan",
+"uses": 43,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.IsDead",
+"uses": 42,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.AwardExperience",
+"uses": 40,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.FindEntitiesByName",
+"uses": 25,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetOrigin",
+"uses": 25,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.HasWeaponEquipped",
+"uses": 24,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) FindPlayer",
+"uses": 20,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.AmmoCount",
+"uses": 17,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.HumanityAdd",
+"uses": 16,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.BumpStat",
+"uses": 13,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.ScriptUnhide",
+"uses": 12,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GiveAmmo",
+"uses": 12,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.Bloodloss",
+"uses": 12,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.GetOrigin",
+"uses": 12,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.WorldMap",
+"uses": 12,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.ChangeMasqueradeLevel",
+"uses": 11,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.SetOrigin",
+"uses": 11,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.Kill",
+"uses": 10,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.SetAngles",
+"uses": 10,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetAngles",
+"uses": 9,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.Whisper",
+"uses": 9,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.GetName",
+"uses": 9,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.GetAngles",
+"uses": 9,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.ScriptUnhide",
+"uses": 8,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SetupPatrolType",
+"uses": 8,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.FollowPatrolPath",
+"uses": 8,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.FindEntitiesByClass",
+"uses": 7,
+"done": false,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.GetModelName",
+"uses": 7,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.GetOrigin",
+"uses": 6,
+"done": true,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetCenter",
+"uses": 6,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.GetCenter",
+"uses": 6,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.GetName",
+"uses": 6,
+"done": true,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) Whisper",
+"uses": 6,
+"done": false,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.ScriptHide",
+"uses": 5,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.FrenzyTrigger",
+"uses": 5,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.IsFollowerOf",
+"uses": 5,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.Spawn",
+"uses": 4,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.TurnOn",
+"uses": 4,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.SetName",
+"uses": 4,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.ScriptHide",
+"uses": 4,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.WillTalk",
+"uses": 4,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "__main__.GiveItem",
+"uses": 4,
+"done": true,
+"group": "Game engine",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.RemoveCamera",
+"uses": 3,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SpawnTempParticle",
+"uses": 3,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetModelName",
+"uses": 3,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.MakePlayerKillable",
+"uses": 3,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.Bloodgain",
+"uses": 3,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetOrigin",
+"uses": 3,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.ImmobilizePlayer",
+"uses": 2,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.HasItem",
+"uses": 2,
+"done": true,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.RemoveItem",
+"uses": 2,
+"done": true,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetCriminalLevel",
+"uses": 2,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.TurnOff",
+"uses": 2,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.SetModel",
+"uses": 2,
+"done": true,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SetFollowerBoss",
+"uses": 2,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) RandomLine",
+"uses": 2,
+"done": false,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.CreateControllerNPC",
+"uses": 2,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SetModel",
+"uses": 2,
+"done": true,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetModel",
+"uses": 2,
+"done": true,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.SetAngles",
+"uses": 2,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) RandomLine",
+"uses": 2,
+"done": false,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) FindEntityByName",
+"uses": 2,
+"done": false,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.SetGesture",
+"uses": 2,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) Whisper",
+"uses": 1,
+"done": false,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) GiveItem",
+"uses": 1,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(script) IsMale",
+"uses": 1,
+"done": true,
+"group": "Level scripts",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.RemoveControllerNPC",
+"uses": 1,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.RemoveDisciplinesNow",
+"uses": 1,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.Trigger",
+"uses": 1,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "entity.Open",
+"uses": 1,
+"done": false,
+"group": "Map objects",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.UseInteresting",
+"uses": 1,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.TakeDamage",
+"uses": 1,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "npc.PlayDialogFile",
+"uses": 1,
+"done": false,
+"group": "Person you talk to",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.ClearActiveDisciplines",
+"uses": 1,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "pc.GetMasqueradeLevel",
+"uses": 1,
+"done": false,
+"group": "Player",
+"area": "Quest & dialogue scripting"
+},
+{
+"name": "(dialogue) ScheduleTask",
+"uses": 1,
+"done": true,
+"group": "Dialogue lines",
+"area": "Quest & dialogue scripting"
+}
+]
